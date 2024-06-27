@@ -198,6 +198,7 @@ export interface MermaidConfig {
   sankey?: SankeyDiagramConfig;
   packet?: PacketDiagramConfig;
   block?: BlockDiagramConfig;
+  euler?: EulerDiagramConfig;
   dompurifyConfig?: DOMPurifyConfiguration;
   wrap?: boolean;
   fontSize?: number;
@@ -1509,6 +1510,15 @@ export interface PacketDiagramConfig extends BaseDiagramConfig {
  * via the `definition` "BlockDiagramConfig".
  */
 export interface BlockDiagramConfig extends BaseDiagramConfig {
+  padding?: number;
+}
+/**
+ * The object containing configurations specific for Euler diagrams.
+ *
+ * This interface was referenced by `MermaidConfig`'s JSON-Schema
+ * via the `definition` "EulerDiagramConfig".
+ */
+export interface EulerDiagramConfig extends BaseDiagramConfig {
   padding?: number;
 }
 /**
